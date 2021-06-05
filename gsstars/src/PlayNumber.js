@@ -6,12 +6,12 @@ export default function PlayNumber(props) {
         used: 'lightgreen',
         wrong: 'lightcoral',
         candidate: 'deepskyblue',
-      };
+    };
 
     return (
         <button
             className="number"
             style={{ backgroundColor: colors[props.status] }}
-            onClick={() => console.log("clicked")}>{props.number}</button>
+            onClick={() => props.onClick(props.number, props.status)}>{props.number}</button>
     )
 }
